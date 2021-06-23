@@ -92,14 +92,18 @@ h1, h2, h3 {
     z-index: 1;
 }
 .introduce-content {
+    padding-top: 194px;
+    padding-left: 42px;
     position: relative;
     z-index: 2;
 }
 .introduce-content__title {
+    width: 675px;
     font-size: 40px;
     margin-bottom: 19px;
 }
 .introduce-content__discription {
+    width: 504px;
     font-size: 22px;
     line-height: 36px;
     margin-bottom: 41px;
@@ -109,4 +113,7 @@ h1, h2, h3 {
     height: 51px;
     border: 1px solid #FFFFFF;
     border-radius: 2px;
+}
+.introduce-content__btn:last-child {
+    margin-left: 20px;
 }
