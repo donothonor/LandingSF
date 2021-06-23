@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    color: #FFFFFF;
+}
+button {
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+}
+.header li {
+    list-style-type: none;
+    text-transform: uppercase;    
+}
+.header span {
+    color: #E3B873;
+}
+.header a {
+    color: #FFFFFF;
+}
+.header-content {
+    height: 83px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header {
+    background: #131313;
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-size: 11px;
+    height: 83px;
+}
+.navigation {
+    width: 580px;
+}
+.navigation-list {
+    display: flex;
+    justify-content: space-between;
+}
+.header-button {
+    color: white;
+    background-color: #E3B873;
+    font-style: italic;
+    width: 161px;
+    height: 37px;
+}
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
