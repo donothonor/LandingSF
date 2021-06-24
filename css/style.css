@@ -2,6 +2,7 @@
     margin: 0;
 }
 body {
+    max-width: 1440px;
     font-family: 'Nunito Sans', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -16,7 +17,9 @@ body {
     cursor: pointer;
     background: none;
 }
-
+li {
+    list-style-type: none;
+}
 
 a {
     text-decoration: none;
@@ -63,7 +66,7 @@ a {
     height: 37px;
 }
 .container {
-    max-width: 1440px;
+    max-width: 1258px;
     margin: 0 auto;
 }
 
@@ -73,37 +76,37 @@ h1, h2, h3 {
     font-weight: normal;
 }
 
-
+@media screen and (max-width : 375px) {
+    .header-button {
+        display: none;
+    }
+    .navigation {
+        display: none;
+    }
+    .container {
+        max-width: 339px;  
+    }
+}
 .introduce {
     position: relative;
-    background: url("../img/image\ 4.3.jpg");
-    height: 707px;
+    background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("../img/image\ 4.3.jpg");
     background-size: cover;
     z-index: 0;
 }
-.introduce::after {
-    content: "";
-    background-color: rgba(0, 0, 0, .7);
-    height: 707px;
-    width: 1920px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+.introduce span {
+    color: #E3B873;
 }
+
 .introduce-content {
     padding-top: 194px;
     padding-left: 42px;
-    position: relative;
-    z-index: 2;
+    padding-bottom: 208px;
 }
 .introduce-content__title {
-    width: 675px;
     font-size: 40px;
     margin-bottom: 19px;
 }
 .introduce-content__discription {
-    width: 504px;
     font-size: 22px;
     line-height: 36px;
     margin-bottom: 41px;
@@ -116,4 +119,155 @@ h1, h2, h3 {
 }
 .introduce-content__btn:last-child {
     margin-left: 20px;
+}
+.application::before {
+    content: "SUBMIT THE APPLICATION";
+}
+
+
+@media screen and (max-width : 375px) {
+    .introduce-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 85px;
+        padding-left: 0px;
+        padding-bottom: 61px;
+    }
+    .introduce-content__title {
+         font-size: 23px;
+    }
+    .introduce-content__discription {
+        font-size: 14px;
+        line-height: 135.84%;
+    }
+    .introduce-content__btn:last-child {
+        margin-left: 0;
+        margin-top: 26px;
+    }
+    .introduce-content__btn {
+        align-self: center;
+        width: 338px;
+        height: 51px;
+    }
+    .application::before {
+        content: "APPLICATION";
+    }
+}
+
+.projects {
+    background-color: black;
+    position: relative;
+ }
+.projects-navigation {
+    width: 623px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 107px;
+    left: 626px;
+ }
+.projects-navigation__item {
+    font-size: 14px;
+    font-family: "Yeseva One";
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.3);
+ }
+ .projects-navigation__item:first-child {
+    color: #E3B873;
+    text-decoration: underline;
+ }
+.projects-content {
+    padding-bottom: 416px;
+    padding-top: 176px;
+    display: flex;
+    justify-content: space-between;
+ }
+
+.projects-content__aside {
+    width: 442px;
+ }
+.project-content__aside__title {
+    margin-bottom: 34px;
+    color: #E3B873;
+    font-size: 27px;
+    text-transform: uppercase;
+ }
+.project-content__aside__discription {
+    font-size: 14px;
+    margin-bottom: 42px;
+ }
+.projects-conetnt__aside__complited {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 34px;
+ }
+.projects-conetnt__aside__complited__item h3 {
+    color: #E3B873;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+ }
+.arrows {
+    width: 162px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+.arrow__l {
+   width: 40.51px;
+   height: 1.34px;
+   background-color: rgb(230, 230, 230);
+ }
+ .arrow__l::before {
+    content: '';
+    background-image: url("../svg/arrow__r.svg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    
+  }
+.dot {
+    background-color: rgba(255, 255, 255, 0.3); 
+    width: 9px;
+    height: 9px;
+    border-radius: 50px;
+}
+
+.arrow__r {
+    width: 40.51px;
+    height: 1.34px;
+    background-color: rgb(230, 230, 230);
+ }
+
+.projects-content__img {
+
+}
+
+@media screen and (max-width: 375px) {
+    .projects {
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+    }
+    .projects-navigation {
+        display: none;
+    }
+    .arrows {
+        display: none;
+    }
+    .projects-content__img {
+       display: none;
+    }
+    .projects-content {
+        padding-top: 36px;
+        display: flex;
+        text-align: center;
+     }
+
 }
